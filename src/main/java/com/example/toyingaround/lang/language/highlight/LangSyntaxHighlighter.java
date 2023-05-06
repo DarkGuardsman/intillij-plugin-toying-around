@@ -48,7 +48,7 @@ public class LangSyntaxHighlighter extends SyntaxHighlighterBase {
     if (tokenType.equals(LangTypes.KEY)) {
       return KEY_KEYS;
     }
-    if (tokenType.equals(LangTypes.VALUE)) {
+    if (tokenType.equals(LangTypes.WORD)) {
       return VALUE_KEYS;
     }
     if (tokenType.equals(LangTypes.COMMENT)) {

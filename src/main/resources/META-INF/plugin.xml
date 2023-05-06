@@ -25,6 +25,22 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+        <!-- https://plugins.jetbrains.com/docs/intellij/language-and-filetype.html -->
+        <fileType
+                name="MCLang"
+                language="MCLang"
+                implementationClass="com.example.toyingaround.lang.language.LangFileType"
+                fieldName="INSTANCE"
+                extensions="lang"
+        />
+        <lang.parserDefinition
+                language="MCLang"
+                implementationClass="com.example.toyingaround.lang.language.LangParserDefinition"
+        />
+        <lang.syntaxHighlighterFactory
+                language="MCLang"
+                implementationClass="com.example.toyingaround.lang.language.highlight.LangSyntaxHighlighterFactory"
+        />
 
     </extensions>
 </idea-plugin>

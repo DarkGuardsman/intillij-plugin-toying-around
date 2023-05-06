@@ -1,0 +1,23 @@
+{
+  parserClass="com.example.toyingaround.lang.language.parser.LangParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Lang"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.example.toyingaround.lang.language.psi"
+  psiImplPackage="com.example.toyingaround.lang.language.psi.impl"
+
+  elementTypeHolderClass="com.example.toyingaround.lang.psi.LangTypes"
+  elementTypeClass="com.example.toyingaround.lang.psi.LangElementType"
+  tokenTypeClass="com.example.toyingaround.lang.psi.LangTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property_value ::= (WORD | COLOR_CODE | WHITE_SPACE)
+
+property ::= (KEY? SEPARATOR property_value?) | KEY
+
